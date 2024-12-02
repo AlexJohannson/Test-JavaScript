@@ -7,6 +7,7 @@ const delete_button = document.getElementById('delete_button');
 
 
 
+
 add_button.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -19,12 +20,58 @@ add_button.addEventListener('click', (event) => {
     liListItem.classList.add('liListItem');
 
     if (!inputName.match(/^(\w+\s*)=(\s*\w)+$/)) {
-        console.log('ororoooooo');
+      inputNameValue.style.background = 'red';
     } else {
-       liListItem.innerText = inputName;
+        inputNameValue.style.background = '#9cbbfc';
+        liListItem.innerText = inputName;
+        olListInput.appendChild(liListItem);
+        listNameValue.appendChild(olListInput);
     }
-
-    olListInput.appendChild(liListItem);
-    listNameValue.appendChild(olListInput);
     inputNameValue.value = '';
 });
+
+
+
+sortByName.addEventListener('click', (event) => {
+    event.preventDefault();
+    const sortName = Array.from(listNameValue.getElementsByClassName('olListInput'));
+    if (sortName.length > 0) {
+        sortName.sort((a, b) => {
+            const nameA = a.querySelector('.liListItem').innerText.split('=')[0];
+            const nameB = b.querySelector('.liListItem').innerText.split('=')[0];
+            if (nameA < nameB) {
+                return -1;
+            } else if (nameA > nameB) {
+                return 1;
+            } else if (nameA === nameB) {
+                return 0;
+            }
+        });
+        listNameValue.innerText = '';
+        sortName.forEach(sortName => listNameValue.appendChild(sortName));
+    }
+});
+
+
+
+sortByValue.addEventListener('click', (event) => {
+    event.preventDefault();
+    const sortValue = Array.from(listNameValue.getElementsByClassName('olListInput'));
+        if (sortValue.length > 0) {
+            sortValue.sort((a, b) => {
+                const valueA = a.querySelector('.liListItem').innerText.split('=')[1];
+                const valueB = b.querySelector('.liListItem').innerText.split('=')[1];
+                if (valueA < valueB) {
+                    return -1;
+                } else if (valueA > valueB) {
+                    return 1;
+                } else if (valueA === valueB) {
+                    return  0;
+                }
+            });
+            listNameValue.innerText = '';
+            sortValue.forEach(sortValue => listNameValue.appendChild(sortValue));
+        }
+});
+
+
