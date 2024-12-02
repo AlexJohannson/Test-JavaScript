@@ -9,14 +9,22 @@ const delete_button = document.getElementById('delete_button');
 
 add_button.addEventListener('click', (event) => {
     event.preventDefault();
+
     const inputName = inputNameValue.value;
+
     const olListInput = document.createElement('ol');
     olListInput.classList.add('olListInput');
+
     const liListItem = document.createElement('li');
     liListItem.classList.add('liListItem');
-    liListItem.innerText = inputName;
+
+    if (!inputName.match(/^(\w+\s*)=(\s*\w)+$/)) {
+        console.log('ororoooooo');
+    } else {
+       liListItem.innerText = inputName;
+    }
+
     olListInput.appendChild(liListItem);
     listNameValue.appendChild(olListInput);
     inputNameValue.value = '';
-
 });
