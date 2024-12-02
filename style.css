@@ -68,7 +68,7 @@
     flex-direction: column;
     gap: 35px;
 }
-#add{
+#add_button{
     width: 70px;
     height: 40px;
     background: #9cbbfc;
@@ -78,7 +78,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-#add:hover{
+#add_button:hover{
     background: #77abb6;
     color: #e94354;
 }
@@ -110,7 +110,7 @@
     background: #77abb6;
     color: #e94354;
 }
-#delete{
+#delete_button{
     width: 100px;
     height: 40px;
     background: #9cbbfc;
@@ -120,7 +120,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-#delete:hover{
+#delete_button:hover{
     background: #77abb6;
     color: #e94354;
+}
+.olListInput{
+    list-style-type: none;
+}
+.liListItem{
+    padding: 10px 0 0 60px;
+    cursor: pointer;
+}
+.liListItem:hover{
+    background: #77abb6;
+    opacity: 0.8;
 }
