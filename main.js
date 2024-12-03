@@ -20,7 +20,7 @@ add_button.addEventListener('click', (event) => {
     liListItem.classList.add('liListItem');
     liListItem.addEventListener('click', (event) => {
         event.target.classList.add('listRemove');
-        liListItem.style.background = 'red';
+        liListItem.style.background = '#e95354';
         console.log(liListItem);
     });
 
