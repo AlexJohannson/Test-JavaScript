@@ -47,10 +47,6 @@ sortByName.addEventListener('click', (event) => {
             const nameB = b.querySelector('.liListItem').innerText.split('=')[0];
             if (nameA < nameB) {
                 return -1;
-            } else if (nameA > nameB) {
-                return 1;
-            } else if (nameA === nameB) {
-                return  0;
             }
         });
         listNameValue.innerText = '';
@@ -70,10 +66,6 @@ sortByValue.addEventListener('click', (event) => {
                 const valueB = b.querySelector('.liListItem').innerText.split('=')[1];
                 if (valueA < valueB) {
                     return -1;
-                } else if (valueA > valueB) {
-                    return 1;
-                } else if (valueA === valueB) {
-                    return  0;
                 }
             });
             listNameValue.innerText = '';
