@@ -1,0 +1,23 @@
+@media screen and (min-width: 769px) and (max-width: 1279px){
+    .app_title h1{
+        font-size: 28px;
+    }
+    .container_input-button{
+        justify-content: center;
+        gap: 20px;
+    }
+    #inputNameValue{
+        width: 280px;
+    }
+   .input{
+       width: 400px;
+       margin-left: 5px;
+   }
+    .button{
+        width: 300px;
+        margin-right: 5px;
+    }
+    #listNameValue{
+        width: 280px;
+    }
+}
