@@ -130,6 +130,7 @@
 .liListItem{
     padding: 10px 0 0 60px;
     cursor: pointer;
+    list-style-type: none;
 }
 .liListItem:hover{
     background: #77abb6;

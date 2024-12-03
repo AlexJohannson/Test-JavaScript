@@ -37,42 +37,34 @@ add_button.addEventListener('click', (event) => {
 
 
 
-
 sortByName.addEventListener('click', (event) => {
     event.preventDefault();
-    const sortName = Array.from(listNameValue.getElementsByClassName('olListInput'));
-    if (sortName.length > 0) {
-        sortName.sort((a, b) => {
-            const nameA = a.querySelector('.liListItem').innerText.split('=')[0];
-            const nameB = b.querySelector('.liListItem').innerText.split('=')[0];
-            if (nameA < nameB) {
-                return -1;
-            }
-        });
-        listNameValue.innerText = '';
-        sortName.forEach(sortName => listNameValue.appendChild(sortName));
-        console.log(sortName);
-    }
+    const liListName = Array.from(listNameValue.getElementsByClassName('liListItem'));
+    liListName.sort((a, b) => {
+        const nameA = a.innerText.split('=')[0];
+        const nameB = b.innerText.split('=')[0];
+        return nameA.localeCompare(nameB);
+    });
+    listNameValue.innerHTML = '';
+    liListName.forEach(sortName => listNameValue.appendChild(sortName));
+    console.log(liListName);
 });
 
 
 
 sortByValue.addEventListener('click', (event) => {
     event.preventDefault();
-    const sortValue = Array.from(listNameValue.getElementsByClassName('olListInput'));
-        if (sortValue.length > 0) {
-            sortValue.sort((a, b) => {
-                const valueA = a.querySelector('.liListItem').innerText.split('=')[1];
-                const valueB = b.querySelector('.liListItem').innerText.split('=')[1];
-                if (valueA < valueB) {
-                    return -1;
-                }
-            });
+    const liListValue = Array.from(listNameValue.getElementsByClassName('liListItem'));
+    liListValue.sort((a, b) => {
+        const valueA = a.innerText.split('=')[1];
+        const valueB = b.innerText.split('=')[1];
+        return valueA.localeCompare(valueB);
+    });
             listNameValue.innerText = '';
-            sortValue.forEach(sortValue => listNameValue.appendChild(sortValue));
-            console.log(sortValue);
-        }
+            liListValue.forEach(sortValue => listNameValue.appendChild(sortValue));
+            console.log(liListValue);
 });
+
 
 
 delete_button.addEventListener('click', (event) => {
