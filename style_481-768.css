@@ -1,0 +1,50 @@
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .name_value-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+    }
+    .name_value-title h1{
+        font-size: 20px;
+        padding: 0;
+    }
+    .container_input-button{
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        height: 720px;
+    }
+    .input{
+        width: 300px;
+        margin: 5px 0 5px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #inputNameValue{
+        width: 280px;
+        margin-left: 0;
+    }
+    #listNameValue{
+        width: 280px;
+        margin-left: 0;
+    }
+    .button{
+        width: 170px;
+        margin-bottom: 5px;
+        align-items: center;
+    }
+    #add_button{
+        margin-left: 0;
+    }
+    #sortByName{
+        margin-left: 0;
+    }
+    #sortByValue{
+        margin-left: 0;
+    }
+    #delete_button{
+        margin-left: 0;
+    }
+}
