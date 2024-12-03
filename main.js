@@ -45,7 +45,7 @@ sortByName.addEventListener('click', (event) => {
         const nameB = b.innerText.split('=')[0];
         return nameA.localeCompare(nameB);
     });
-    listNameValue.innerHTML = '';
+    listNameValue.innerText = '';
     liListName.forEach(sortName => listNameValue.appendChild(sortName));
     console.log(liListName);
 });
