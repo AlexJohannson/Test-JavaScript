@@ -19,9 +19,9 @@ add_button.addEventListener('click', (event) => {
     const liListItem = document.createElement('li');
     liListItem.classList.add('liListItem');
     liListItem.addEventListener('click', (event) => {
-        console.log(event);
         event.target.classList.add('listRemove');
         liListItem.style.background = 'red';
+        console.log(liListItem);
     });
 
     if (!inputName.match(/^(\w+\s*)=(\s*\w)+$/)) {
@@ -37,6 +37,7 @@ add_button.addEventListener('click', (event) => {
 
 
 
+
 sortByName.addEventListener('click', (event) => {
     event.preventDefault();
     const sortName = Array.from(listNameValue.getElementsByClassName('olListInput'));
@@ -49,7 +50,7 @@ sortByName.addEventListener('click', (event) => {
             } else if (nameA > nameB) {
                 return 1;
             } else if (nameA === nameB) {
-                return 0;
+                return  0;
             }
         });
         listNameValue.innerText = '';
