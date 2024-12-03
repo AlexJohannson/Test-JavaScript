@@ -86,5 +86,6 @@ delete_button.addEventListener('click', (event) => {
     event.preventDefault();
     const removeButton = Array.from(listNameValue.getElementsByClassName('listRemove'));
     removeButton.forEach(itemList => itemList.remove());
+    console.log(removeButton);
 });
 
