@@ -70,14 +70,14 @@ sortByName.addEventListener('click', () => {
     /*використовую Array.from для перетворення HTML колекції в масив*/
     const liListName = Array.from(listNameValue.getElementsByClassName('liListItem'));
 
-    /*сортую масив за значенням <name>. Використовую метод split який розбиває рядок на масив підрядків символ
+    /*сортую масив за значенням "<name>". Використовую метод split який розбиває рядок на масив підрядків символ
     * "=" є роздільником в данній роботі якщо a.innerText="name=value" то a.innerText.split('=') перетворює на
     * масив ["name", "value"]. [0] вибираю перший елемент масиву до знака "=" тобто "name"*/
     liListName.sort((a, b) => {
         const liListNameFirst = a.innerText.split('=')[0];
         const liListNameSecond = b.innerText.split('=')[0];
 
-        /*методом localCompare порівнюю два рядки liListNameFirst та liListNameSecond, метод повертає -1
+        /*методом localeCompare порівнюю два рядки liListNameFirst та liListNameSecond, метод повертає -1
         *  якщо liListNameFirst менше liListNameSecond, 0 якщо вони рівні і 1 якщо liListNameFirst
         * більше liListNameSecond*/
         return liListNameFirst.localeCompare(liListNameSecond);
