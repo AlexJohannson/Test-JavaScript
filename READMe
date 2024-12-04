@@ -1,0 +1,45 @@
+"Name/Value Application":
+The application is designed to manage the list of pairs "Name/Value". This allow the user to enter, sort and delete
+pairs.
+
+Functions of application:
+- enter pairs "Name/Value":
+user can enter pairs "Name/Value" in the format "<name> = <value>" in the text field, after which the syntax of the
+entered data is checked. A hint for the correct syntax is in the input field. If the user enters an incorrect format the
+input field will be highlighted in red color, warning the user about incorrect data entry syntax.
+
+-adding pairs "Name/Value":
+after entering the pair "<name> = <value>" user presses the button "Add" and the entered pair added to the list in
+HTML "<div id="listNameValue"></div>" in HTML format "<ol><li> <name> = <value> </li></ol>".
+
+-sorting the list:
+the user can sort the list by names or values using the buttons "Sort by Name" or "Sort by Value".
+
+-deleting items:
+the user can delete individual items from the list. To do this click on the list item to highlight it the color of
+the highlighted item turns red color and then click the button "Delete".
+
+User interface:
+-application:
+the user can open the app on any device. The app automatically adjusts to the size of the screen.
+
+-input field:
+is located at the top of the application where the user enters their pairs <name> = <value>.
+
+-buttons:
+"Add" - add a new item to the list.
+"Sort by Name" - sorts the list by name.
+"Sort by Value" - sorts the list by value.
+"Delete" - removes selected items from the list.
+
+-list of elements:
+displays all added pairs <name> = <value>. Elements can be selected for deletion, when user click on the elements their
+background changes to red color.
+
+Using the "Name/Value Application":
+
+-step 1: enter the pair <name> = <value> in the text field.
+-step 2: click button "Add" to add the pair <name> = <value> to the list.
+-step 3: if user want to sort the list, click the button "Sort by Name" to sort by <name> or button "Sort by Value"
+to sort by <value>.
+-step 4: select an element, click on it, then press button "Delete" to delete it.
