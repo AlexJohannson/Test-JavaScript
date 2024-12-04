@@ -1,20 +1,24 @@
 @media screen and (min-width: 481px) and (max-width: 768px){
+    /*---------------------------   div class="name_value-title"  ----------------------*/
     .name_value-title{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 70px;
     }
+    /*----------------------------------   title application h1  -----------------------------*/
     .name_value-title h1{
         font-size: 20px;
         padding: 0;
     }
+    /*----------------------------------   div class="container_input-button"   --------------------*/
     .container_input-button{
         justify-content: center;
         flex-direction: column;
         gap: 10px;
         height: 720px;
     }
+    /*-----------------------------------   div class="input"   --------------------------*/
     .input{
         width: 300px;
         margin: 5px 0 5px 0;
@@ -22,28 +26,35 @@
         align-items: center;
         flex-direction: column;
     }
-    #inputNameValue{
+    /*-------------------------------------input id="input_name-value"  ----------------------------------*/
+    #input_name-value{
         width: 280px;
         margin-left: 0;
     }
-    #listNameValue{
+    /*----------------------------------   div id="list_name-value"  -----------------------*/
+    #list_name-value{
         width: 280px;
         margin-left: 0;
     }
+    /*-----------------------------------------   div class="button"  -------------------*/
     .button{
         width: 170px;
         margin-bottom: 5px;
         align-items: center;
     }
+    /*------------------------------   button id="add_button"   ------------------------*/
     #add_button{
         margin-left: 0;
     }
-    #sortByName{
+    /*------------------------------  button id="sort_by-name"   ------------------------*/
+    #sort_by-name{
         margin-left: 0;
     }
-    #sortByValue{
+    /*-----------------------------------  button id="sort_by-value"  ----------------------*/
+    #sort_by-value{
         margin-left: 0;
     }
+    /*----------------------------------  button id="delete_button"  ---------------------*/
     #delete_button{
         margin-left: 0;
     }

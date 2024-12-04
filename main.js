@@ -1,14 +1,14 @@
-const inputNameValue = document.getElementById('inputNameValue');
-const listNameValue = document.getElementById('listNameValue');
-const add_button = document.getElementById('add_button');
-const sortByName = document.getElementById('sortByName');
-const sortByValue = document.getElementById('sortByValue');
-const delete_button = document.getElementById('delete_button');
+const inputNameValue = document.getElementById('input_name-value');
+const listNameValue = document.getElementById('list_name-value');
+const addButton = document.getElementById('add_button');
+const sortByName = document.getElementById('sort_by-name');
+const sortByValue = document.getElementById('sort_by-value');
+const deleteButton = document.getElementById('delete_button');
 
 
 
 
-add_button.addEventListener('click', (event) => {
+addButton.addEventListener('click', (event) => {
     event.preventDefault();
 
     const inputName = inputNameValue.value;
@@ -65,7 +65,7 @@ sortByValue.addEventListener('click', (event) => {
 
 
 
-delete_button.addEventListener('click', (event) => {
+deleteButton.addEventListener('click', (event) => {
     event.preventDefault();
     const removeButton = Array.from(listNameValue.getElementsByClassName('listRemove'));
     removeButton.forEach(itemList => itemList.remove());

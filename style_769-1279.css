@@ -1,26 +1,33 @@
 @media screen and (min-width: 769px) and (max-width: 1279px){
+    /*----------------------------------   title application h1  -----------------------------*/
     .name_value-title h1{
         font-size: 28px;
     }
+    /*----------------------------------   div class="container_input-button"   --------------------*/
     .container_input-button{
         justify-content: center;
         gap: 20px;
     }
+    /*------------------------------------div class="input" label  ---------------------------*/
     .input label{
         margin-left: 30px;
     }
-    #inputNameValue{
+    /*-------------------------------------input id="input_name-value"  ----------------------------------*/
+    #input_name-value{
         width: 280px;
         margin-left: 30px;
     }
+    /*-----------------------------------   div class="input"   --------------------------*/
    .input{
        width: 400px;
        margin-left: 5px;
    }
-    #listNameValue{
+    /*----------------------------------   div id="list_name-value"  -----------------------*/
+    #list_name-value{
         width: 280px;
         margin-left: 30px;
     }
+    /*-----------------------------------------   div class="button"  -------------------*/
     .button{
         width: 300px;
         margin-right: 5px;
