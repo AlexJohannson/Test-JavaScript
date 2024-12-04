@@ -41,11 +41,10 @@ sortByName.addEventListener('click', (event) => {
     event.preventDefault();
     const liListName = Array.from(listNameValue.getElementsByClassName('liListItem'));
     liListName.sort((a, b) => {
-        const nameA = a.innerText.split('=')[0];
-        const nameB = b.innerText.split('=')[0];
-        return nameA.localeCompare(nameB);
+        const liListNameFirst = a.innerText.split('=')[0];
+        const liListNameSecond = b.innerText.split('=')[0];
+        return liListNameFirst.localeCompare(liListNameSecond);
     });
-    listNameValue.innerText = '';
     liListName.forEach(sortName => listNameValue.appendChild(sortName));
     console.log(liListName);
 });
@@ -56,13 +55,12 @@ sortByValue.addEventListener('click', (event) => {
     event.preventDefault();
     const liListValue = Array.from(listNameValue.getElementsByClassName('liListItem'));
     liListValue.sort((a, b) => {
-        const valueA = a.innerText.split('=')[1];
-        const valueB = b.innerText.split('=')[1];
-        return valueA.localeCompare(valueB);
+        const liListValueFirst = a.innerText.split('=')[1];
+        const liListValueSecond = b.innerText.split('=')[1];
+        return liListValueFirst.localeCompare(liListValueSecond);
     });
-            listNameValue.innerText = '';
-            liListValue.forEach(sortValue => listNameValue.appendChild(sortValue));
-            console.log(liListValue);
+    liListValue.forEach(sortValue => listNameValue.appendChild(sortValue));
+    console.log(liListValue);
 });
 
 
