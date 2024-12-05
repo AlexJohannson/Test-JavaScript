@@ -65,6 +65,7 @@ addButton.addEventListener('click', () => {
 
     /*очищаю текстове поле після додавання до списку*/
     inputNameValue.value = '';
+    console.log(inputName);
 });
 
 /*------------------------------------------   sortByName   ----------------------------------------------------*/
@@ -90,9 +91,15 @@ sortByName.addEventListener('click', () => {
         return liListNameFirst.localeCompare(liListNameSecond);
     });
 
-    /*використовую forEach для перебору всіх відсортованих елементів в масиві liListName і додаю відсортовані елементи
-    назад до <div id="list_name-value"></div>*/
-    liListName.forEach(sortName => listNameValue.appendChild(sortName));
+    /*ітерую кожен елемент у масиві liListName*/
+    for (const liListItem of liListName) {
+
+        /*додаю відсортовані елементи назад до <div id="list_name-value"></div>*/
+        listNameValue.appendChild(liListItem);
+
+        /*виводжу відсортовані елементи liListItem з масиву liListName в консоль*/
+        console.log(liListItem);
+    }
 
     /*виводжу відсортований масив в консоль*/
     console.log(liListName);
@@ -122,9 +129,15 @@ sortByValue.addEventListener('click', () => {
         return liListValueFirst.localeCompare(liListValueSecond);
     });
 
-    /*використовую forEach для перебору всіх відсортованих елементів в масиві liListValue і додаю відсортовані елементи
-    назад до <div id="list_name-value"></div>*/
-    liListValue.forEach(sortValue => listNameValue.appendChild(sortValue));
+    /*ітерую кожен елемент у масиві liListValue*/
+    for (const liListItem of liListValue) {
+
+        /*додаю відсортовані елементи назад до <div id="list_name-value"></div>*/
+        listNameValue.appendChild(liListItem);
+
+        /*виводжу відсортовані елементи liListItem з масиву liListValue в консоль*/
+        console.log(liListItem);
+    }
 
     /*виводжу відсортований масив в консоль*/
     console.log(liListValue);
@@ -139,9 +152,15 @@ deleteButton.addEventListener('click', () => {
     HTML колекції в масив отриманої з listNameValue.getElementsByClassName('listRemove')*/
     const removeButton = Array.from(listNameValue.getElementsByClassName('listRemove'));
 
-    /*використовую forEach для перебору всіх елементів в масиві removeButton, потім видаляє вибрані елементи
-    користувачем з дерева документа, з HTML сторінки*/
-    removeButton.forEach(itemList => itemList.remove());
+    /*ітерую кожен елемент у масиві removeButton*/
+    for (const removeButtonItem of removeButton) {
+
+        /*видаляю вибрані елементи користувачем з дерева документа, з HTML сторінки*/
+        removeButtonItem.remove();
+
+        /*виводжу видалені елементи користувачем в консоль*/
+        console.log(removeButtonItem);
+    }
 
     /*виводжу видалені елементи в консоль*/
     console.log(removeButton);
