@@ -33,11 +33,8 @@ addButton.addEventListener('click', () => {
         /*додаю клас для позначення елемента <li></li> який потрібно видалити*/
         event.target.classList.add('listRemove');
 
-        /*змінюю background елемента <li></li> на червоний колір*/
+        /*змінюю background елемента <li></li> на червоний колір при кліку на ньго користувачем*/
         liListItem.style.background = '#e95354';
-
-        /*вивожу елемент <li></li> в консоль*/
-        console.log(liListItem);
     });
 
 /*------------------------------------------  перевірка формату введеного тексту  ---------------------------------*/
@@ -65,6 +62,8 @@ addButton.addEventListener('click', () => {
 
     /*очищаю текстове поле після додавання до списку*/
     inputNameValue.value = '';
+
+    /*виводжу в консоль введені користувачем значення <name>=<value>*/
     console.log(inputName);
 });
 
@@ -81,7 +80,7 @@ sortByName.addEventListener('click', () => {
     * масив ["name", "value"]. [0] вибираю перший елемент масиву до знака "=" тобто "name"*/
     liListName.sort((a, b) => {
 
-        /*створю константи liListNameFirst, liListNameSecond для зберігання значень отриманих з масиву*/
+        /*створю константи liListNameFirst, liListNameSecond для зберігання значень отриманих з масиву liListName*/
         const liListNameFirst = a.innerText.split('=')[0];
         const liListNameSecond = b.innerText.split('=')[0];
 
@@ -101,7 +100,7 @@ sortByName.addEventListener('click', () => {
         console.log(liListItem);
     }
 
-    /*виводжу відсортований масив в консоль*/
+    /*виводжу відсортований масив liListName в консоль*/
     console.log(liListName);
 });
 
@@ -119,7 +118,7 @@ sortByValue.addEventListener('click', () => {
     * масив ["name", "value"]. [1] вибираю другий елемент масиву до знака "=" тобто "value"*/
     liListValue.sort((a, b) => {
 
-        /*створю константи liListValueFirst, liListValueSecond для зберігання значень отриманих з масиву*/
+        /*створю константи liListValueFirst, liListValueSecond для зберігання значень отриманих з масиву liListValue*/
         const liListValueFirst = a.innerText.split('=')[1];
         const liListValueSecond = b.innerText.split('=')[1];
 
@@ -132,14 +131,14 @@ sortByValue.addEventListener('click', () => {
     /*ітерую кожен елемент у масиві liListValue*/
     for (const liListItem of liListValue) {
 
-        /*додаю відсортовані елементи назад до <div id="list_name-value"></div>*/
+        /*додаю відсортовані елементи liListItem назад до <div id="list_name-value"></div>*/
         listNameValue.appendChild(liListItem);
 
         /*виводжу відсортовані елементи liListItem з масиву liListValue в консоль*/
         console.log(liListItem);
     }
 
-    /*виводжу відсортований масив в консоль*/
+    /*виводжу відсортований масив liListValue в консоль*/
     console.log(liListValue);
 });
 
@@ -158,11 +157,11 @@ deleteButton.addEventListener('click', () => {
         /*видаляю вибрані елементи користувачем з дерева документа, з HTML сторінки*/
         removeButtonItem.remove();
 
-        /*виводжу видалені елементи користувачем в консоль*/
+        /*виводжу видалені елементи removeButtonItem користувачем в консоль*/
         console.log(removeButtonItem);
     }
 
-    /*виводжу видалені елементи в консоль*/
+    /*виводжу в консоль масив removeButton з видаленим елементом removeButtonItem*/
     console.log(removeButton);
 });
 
