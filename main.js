@@ -93,7 +93,7 @@ sortByName.addEventListener('click', () => {
     /*ітерую кожен елемент у масиві liListName*/
     for (const liListItem of liListName) {
 
-        /*додаю відсортовані елементи назад до <div id="list_name-value"></div>*/
+        /*додаю відсортовані елементи liListItem назад до <div id="list_name-value"></div>*/
         listNameValue.appendChild(liListItem);
 
         /*виводжу відсортовані елементи liListItem з масиву liListName в консоль*/
@@ -115,7 +115,7 @@ sortByValue.addEventListener('click', () => {
 
     /*сортую масив за значенням "<value>". Використовую метод split який розбиває рядок на масив підрядків символ
     * "=" є роздільником в данній роботі якщо a.innerText="name=value" то a.innerText.split('=') перетворює на
-    * масив ["name", "value"]. [1] вибираю другий елемент масиву до знака "=" тобто "value"*/
+    * масив ["name", "value"]. [1] вибираю другий елемент масиву після знака "=" тобто "value"*/
     liListValue.sort((a, b) => {
 
         /*створю константи liListValueFirst, liListValueSecond для зберігання значень отриманих з масиву liListValue*/
@@ -154,10 +154,10 @@ deleteButton.addEventListener('click', () => {
     /*ітерую кожен елемент у масиві removeButton*/
     for (const removeButtonItem of removeButton) {
 
-        /*видаляю вибрані елементи користувачем з дерева документа, з HTML сторінки*/
+        /*видаляю вибрані елементи removeButtonItem користувачем з дерева документа, з HTML сторінки*/
         removeButtonItem.remove();
 
-        /*виводжу видалені елементи removeButtonItem користувачем в консоль*/
+        /*виводжу видалені елементи removeButtonItem в консоль*/
         console.log(removeButtonItem);
     }
 
