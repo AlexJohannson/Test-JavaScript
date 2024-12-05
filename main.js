@@ -33,7 +33,7 @@ addButton.addEventListener('click', () => {
         /*додаю клас для позначення елемента <li></li> який потрібно видалити*/
         event.target.classList.add('listRemove');
 
-        /*змінюю background елемента <li></li> на червоний колір при кліку на ньго користувачем*/
+        /*змінюю background елемента <li></li> на червоний колір при кліку на нього користувачем*/
         liListItem.style.background = '#e95354';
     });
 
