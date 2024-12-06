@@ -24,7 +24,7 @@ addButton.addEventListener('click', () => {
 
 /*---------------------------  checking the correctness of the <name>=<value> entered by the user  ---------*/
     if (!inputName.match(/^(\w+\s*)=(\s*\w)+$/)) {
-        inputNameValue.style.background = 'red';
+        inputNameValue.style.background = '#e95354';
     } else {
         inputNameValue.style.background = '#9cbbfc';
         liListItem.innerText = inputName;
